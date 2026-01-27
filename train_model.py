@@ -33,7 +33,7 @@ import seaborn as sns
 import category_encoders as ce
 
 # Paths
-DATA_PATH = "/data/main.csv"
+DATA_PATH = os.path.join(os.path.dirname(__file__), "data", "main.csv")
 ARTIFACT_DIR = "./artifacts"
 os.makedirs(ARTIFACT_DIR, exist_ok=True)
 
