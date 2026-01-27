@@ -297,7 +297,7 @@ def train_and_evaluate(df_fe, train_ids, test_ids):
     SMOTE = try_import_smote()
     if SMOTE is not None:
         print("Using SMOTE for oversampling (imblearn available).")
-        sm = SMOTE(random_state=42, n_jobs=4)
+        sm = SMOTE(random_state=42)
         X_res, y_res = sm.fit_resample(X_train_df, y_train)
     else:
         print("imblearn not available — using sklearn resample upsampling.")
